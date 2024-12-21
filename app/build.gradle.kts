@@ -3,7 +3,7 @@ plugins {
     alias(libs.plugins.kotlin.android)
     id("com.google.dagger.hilt.android")
     id("kotlin-kapt")
-    alias(libs.plugins.google.gms.google.services)
+    id("com.google.gms.google-services")
 }
 
 android {
@@ -64,7 +64,9 @@ dependencies {
     implementation(libs.firebase.firestore)
     implementation(libs.firebase.storage.ktx)
     implementation(libs.firebase.coroutines)
-
+    implementation(libs.firebase.analytics)
+    implementation(libs.firebase.bom)
+    
     // ExoPlayer
     api(libs.exoplayer.core)
     api(libs.exoplayer.ui)
